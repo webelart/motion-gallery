@@ -1,10 +1,11 @@
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
 	line-height: 1.5;
 	font-weight: 400;
 
-	color: #222;
-	background-color: #ffffff;
+	color: #fff;
+	background-color: #19002A;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
