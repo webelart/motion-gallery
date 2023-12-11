@@ -2,16 +2,8 @@
   width: 100%;
   height: 100vh;
   color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-  .coverGallery-slide {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    display: none;
-  }
-
-  .coverGallery-slideActive {
-    display: block;
-  }
 

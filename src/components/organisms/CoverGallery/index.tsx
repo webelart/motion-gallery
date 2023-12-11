@@ -1,6 +1,7 @@
 import { ComponentChildren } from 'preact';
 import cl from 'classnames';
 
+import { Header } from '../../molecules/Header';
 import { ComponentProps } from '../../types';
 
 import './index.css';
@@ -12,33 +13,24 @@ interface CoverGallerySlide {
 }
 
 interface CoverGalleryProps extends ComponentProps {
-  slides: CoverGallerySlide[];
+  // slides: CoverGallerySlide[];
   activeIndex?: number;
 }
 
 export function CoverGallery({
-  slides,
-  activeIndex = 0,
   className,
 }: CoverGalleryProps) {
 	return (
     <div
       className={cl(className, 'coverGallery')}
+      style={{
+        backgroundImage: `url(./public/gallery/design.webp)`,
+      }}
     >
-      {slides.map(({ id, imgSrc, content }, index) => (
-        <div
-          key={id}
-          className={cl(
-            'coverGallery-slide',
-            activeIndex === index && 'coverGallery-slideActive',
-          )}
-          style={{
-            backgroundImage: `url(${imgSrc})`,
-          }}
-        >
-          {content}
-        </div>
-      ))}
+      <Header />
+      <div>
+
+      </div>
     </div>
 	);
 }
