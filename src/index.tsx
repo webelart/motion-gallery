@@ -1,9 +1,10 @@
 import { render } from 'preact';
 
-import { CoverGallery } from './components/CoverGallery';
-import { Header } from './components/Header';
+import { CoverGallery } from './components/organisms/CoverGallery';
+import { Header } from './components/molecules/Header';
 
-import './style.css';
+import './global/styles/reset.css';
+import './global/styles/style.css';
 
 export function App() {
 	return (
@@ -44,15 +45,6 @@ export function App() {
 				]}
 			/>
 		</div>
-	);
-}
-
-function Resource(props) {
-	return (
-		<a href={props.href} target="_blank" class="resource">
-			<h2>{props.title}</h2>
-			<p>{props.description}</p>
-		</a>
 	);
 }
 
