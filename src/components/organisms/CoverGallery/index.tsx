@@ -24,7 +24,7 @@ export function CoverGallery({
     <div
       className={cl(className, 'coverGallery')}
       style={{
-        backgroundImage: `url(./public/gallery/design.webp)`,
+        backgroundImage: `url(./public/gallery/parot.webp)`,
       }}
     >
       <Header />
