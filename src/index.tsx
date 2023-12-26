@@ -1,13 +1,19 @@
 import { render } from 'preact';
 
-import { CoverGallery } from './components/organisms/CoverGallery';
+import Header from './components/organisms/Header';
+import Main from './components/pages/Main';
 
 import './global/styles/reset.css';
 import './global/styles/style.css';
 
+import styles from './index.module.scss';
+
 export function App() {
 	return (
-		<CoverGallery />
+		<>
+			<Header className={styles.header} />
+			{/* <Main /> */}
+		</>
 	);
 }
 

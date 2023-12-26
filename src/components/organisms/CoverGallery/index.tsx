@@ -1,8 +1,7 @@
 import { ComponentChildren } from 'preact';
 import cl from 'classnames';
 
-import { Header } from '../../molecules/Header';
-import { ComponentProps } from '../../types';
+import { ComponentProps } from '@components/types';
 
 import './index.css';
 
@@ -17,19 +16,18 @@ interface CoverGalleryProps extends ComponentProps {
   activeIndex?: number;
 }
 
-export function CoverGallery({
+export default function CoverGallery({
   className,
 }: CoverGalleryProps) {
 	return (
     <div
       className={cl(className, 'coverGallery')}
       style={{
-        backgroundImage: `url(./public/gallery/parot.webp)`,
+        backgroundImage: `url(/gallery/parot.webp)`,
       }}
     >
-      <Header />
       <div>
-
+        CoverGallery
       </div>
     </div>
 	);

@@ -1,11 +1,25 @@
-import { IconName } from '@components/types';
+import { IconName, ComponentProps } from '@components/types';
 
-import './index.css';
+import cl from 'classnames';
 
-export function Icon(props) {
+import styles from './index.module.scss';
+
+interface IconProps extends ComponentProps {
+	iconName: IconName;
+	size: 'small' | 'medium' | 'large';
+}
+
+export default function Icon({
+	iconName,
+	size,
+}: IconProps) {
 	return (
-		<span>
-			12312
-		</span>
+		<span
+			className={cl(
+				styles[iconName],
+				styles.icon,
+				styles[size]
+			)}
+		/>
 	);
 }
