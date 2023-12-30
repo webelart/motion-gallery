@@ -1,3 +1,40 @@
 .icon {
-  width: 10px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.large {
+  width: 50px;
+  height: 50px;
+}
+
+.medium {
+  width: 25px;
+  height: 25px;
+}
+
+.small {
+  width: 25px;
+  height: 25px;
+}
+
+.arrow-left {
+  background-image: url(./images/arrow-left.svg);
+}
+
+.arrow-right {
+  background-image: url(./images/arrow-right.svg);
+}
+
+.logo {
+  background-image: url(./images/logo.svg);
+}
+
+.search {
+  background-image: url(./images/search.svg);
+}
+
+.sun {
+  background-image: url(./images/sun.svg);
 }

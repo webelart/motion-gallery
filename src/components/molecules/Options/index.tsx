@@ -1,11 +1,11 @@
 import { ComponentProps } from '@components/types';
 
-export default function Navigation({
+export default function Options({
   className
 }: ComponentProps) {
   return (
     <div>
-      Navigation
+      Options
     </div>
   );
 }

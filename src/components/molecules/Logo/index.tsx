@@ -15,8 +15,10 @@ export default function Logo({
         iconName="logo"
         className={styles.logoIcon}
       />
-      <div className={styles.logoTitle}>Future</div>
-      <div className={styles.logoSubtitle}>Today - Tomorrow</div>
+      <span>
+        <span className={styles.logoTitle}>Futura</span>
+        <span className={styles.logoSubtitle}>Today - Tomorrow</span>
+      </span>
     </a>
 	);
 }
