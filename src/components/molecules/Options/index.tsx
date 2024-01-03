@@ -1,4 +1,5 @@
 import { ComponentProps } from '@components/types';
+import cl from 'classnames';
 
 import Icon from '../../atoms/Icon';
 
@@ -8,7 +9,7 @@ export default function Options({
   className
 }: ComponentProps) {
   return (
-    <ul className={styles.options}>
+    <ul className={cl(styles.options, className)}>
       <li className={styles.optionsItem}>
         <a href="#" className={styles.optionsLink}>
           <Icon iconName="sun" />

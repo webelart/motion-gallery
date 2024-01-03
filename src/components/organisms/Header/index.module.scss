@@ -1,10 +1,22 @@
 .header {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  &Container {
+    display: grid;
+    align-items: center;
+    gap: 30px;
+    grid-template-columns: auto 1fr auto;
+  }
 
   &Navigation {
     justify-content: center;
+  }
+
+  &Options {
+    width: 162px;
   }
 }

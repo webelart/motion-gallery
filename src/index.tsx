@@ -1,7 +1,7 @@
 import { render } from 'preact';
 
 import Header from './components/organisms/Header';
-import Main from './components/pages/Main';
+import Home from './components/pages/Home';
 
 import './global/styles/reset.css';
 import './global/styles/style.css';
@@ -12,7 +12,7 @@ export function App() {
 	return (
 		<>
 			<Header className={styles.header} />
-			{/* <Main /> */}
+			<Home />
 		</>
 	);
 }

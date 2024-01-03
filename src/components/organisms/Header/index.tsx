@@ -11,12 +11,12 @@ export default function Header({
 	className,
 }: ComponentProps) {
 	return (
-		<Container type="header">
-			<header className={styles.header}>
+		<header className={styles.header}>
+			<Container type="header" className={styles.headerContainer}>
 				<Logo />
 				<Navigation className={styles.headerNavigation} />
-				<Options />
-			</header>
-		</Container>
+				<Options className={styles.headerOptions} />
+			</Container>
+		</header>
 	);
 }

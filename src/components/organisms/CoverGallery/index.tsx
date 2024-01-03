@@ -1,9 +1,11 @@
 import { ComponentChildren } from 'preact';
 import cl from 'classnames';
 
+import Container from '../../atoms/Container';
+
 import { ComponentProps } from '@components/types';
 
-import './index.css';
+import styles from './index.module.scss';
 
 interface CoverGallerySlide {
   id: number;
@@ -21,14 +23,14 @@ export default function CoverGallery({
 }: CoverGalleryProps) {
 	return (
     <div
-      className={cl(className, 'coverGallery')}
+      className={cl(className, styles.gallery)}
       style={{
         backgroundImage: `url(/gallery/parot.webp)`,
       }}
     >
-      <div>
+      <Container className={styles.galleryContainer}>
         CoverGallery
-      </div>
+      </Container>
     </div>
 	);
 }

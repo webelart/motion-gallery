@@ -11,7 +11,7 @@ interface ContainerProps extends ComponentProps {
 
 const Container = ({
 	children,
-  type,
+  type = 'container',
   className,
 }: ContainerProps) => (
   <div className={cl(styles[type], className)}>
