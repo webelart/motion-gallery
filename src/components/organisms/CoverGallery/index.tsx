@@ -2,6 +2,7 @@ import { ComponentChildren } from 'preact';
 import cl from 'classnames';
 
 import Container from '../../atoms/Container';
+import Promo from '../../molecules/Promo';
 
 import { ComponentProps } from '@components/types';
 
@@ -29,7 +30,7 @@ export default function CoverGallery({
       }}
     >
       <Container className={styles.galleryContainer}>
-        CoverGallery
+        <Promo />
       </Container>
     </div>
 	);
