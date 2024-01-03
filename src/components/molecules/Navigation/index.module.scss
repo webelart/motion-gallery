@@ -1,0 +1,18 @@
+.navigation {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  gap: 2vw;
+  font-size: 18px;
+  line-height: 1;
+  
+  &Link {
+    color: white;
+
+    &:hover,
+    &:visited {
+      color: white;
+    }
+
+    text-decoration: none;
+  }
+}
