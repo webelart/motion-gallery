@@ -6,12 +6,12 @@ import styles from './index.module.scss';
 
 interface IconProps extends ComponentProps {
 	iconName: IconName;
-	size: 'small' | 'medium' | 'large';
+	size?: 'small' | 'medium' | 'large';
 }
 
 export default function Icon({
 	iconName,
-	size,
+	size = 'medium',
 }: IconProps) {
 	return (
 		<span

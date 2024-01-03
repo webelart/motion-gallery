@@ -1,19 +1,22 @@
 import { ComponentProps } from '@components/types';
 
+import Container from '../../atoms/Container';
 import Logo from '../../molecules/Logo';
 import Navigation from '../../molecules/Navigation';
 import Options from '../../molecules/Options';
 
-import './index.css';
+import styles from './index.module.scss';
 
 export default function Header({
 	className,
 }: ComponentProps) {
 	return (
-		<header className={className}>
-			<Logo />
-			<Navigation />
-			<Options />
-		</header>
+		<Container type="header">
+			<header className={styles.header}>
+				<Logo />
+				<Navigation className={styles.headerNavigation} />
+				<Options />
+			</header>
+		</Container>
 	);
 }
