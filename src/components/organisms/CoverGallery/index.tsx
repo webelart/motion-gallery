@@ -3,6 +3,7 @@ import cl from 'classnames';
 
 import Container from '../../atoms/Container';
 import Promo from '../../molecules/Promo';
+import Actions from '../../molecules/Actions';
 
 import { ComponentProps } from '@components/types';
 
@@ -31,6 +32,12 @@ export default function CoverGallery({
     >
       <Container className={styles.galleryContainer}>
         <Promo />
+        <Actions
+          activeIndex={1}
+          amount={3}
+          onClickNext={() => {}}
+          onClickPrev={() => {}}
+        />
       </Container>
     </div>
 	);

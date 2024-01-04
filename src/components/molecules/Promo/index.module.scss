@@ -1,5 +1,9 @@
 .promo {
   max-width: 50vw;
+  display: flex;
+  max-width: 50vw;
+  justify-content: center;
+  flex-direction: column;
 
   h2 {
     text-transform: uppercase;
