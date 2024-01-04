@@ -1,7 +1,4 @@
 import { ComponentProps } from '@components/types';
-import cl from 'classnames';
-
-import Icon from '../../atoms/Icon';
 
 import styles from './index.module.scss';
 
