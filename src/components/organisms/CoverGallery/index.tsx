@@ -1,44 +1,72 @@
 import { ComponentChildren } from 'preact';
+import { useState } from 'preact/hooks'
 import cl from 'classnames';
 
 import Container from '../../atoms/Container';
-import Promo from '../../molecules/Promo';
 import Actions from '../../molecules/Actions';
-
-import { ComponentProps } from '@components/types';
 
 import styles from './index.module.scss';
 
 interface CoverGallerySlide {
   id: number;
-  imgSrc: string;
+  backgroundImageUrl: string;
   content: ComponentChildren;
 }
 
-interface CoverGalleryProps extends ComponentProps {
-  // slides: CoverGallerySlide[];
-  activeIndex?: number;
+interface CoverGalleryProps {
+  slides: CoverGallerySlide[];
+  startIndex?: number;
 }
 
 export default function CoverGallery({
-  className,
+  slides,
+  startIndex = 0,
 }: CoverGalleryProps) {
+  if (slides.length > 10) {
+    throw new Error("CoverGallery can't show over 10 slides");
+  }
+
+  const [ activeIndex, setActiveIndex ] = useState(startIndex);
+
 	return (
-    <div
-      className={cl(className, styles.gallery)}
-      style={{
-        backgroundImage: `url(/gallery/parot.webp)`,
-      }}
-    >
+    <main className={styles.gallery}>
       <Container className={styles.galleryContainer}>
-        <Promo />
+        <div className={styles.content}>
+          {slides.map(({id, content}, index) => (
+            <div
+              key={id}
+              className={cl(index === activeIndex && styles.contentActive)}
+            >
+              {content}
+            </div>
+          ))}
+        </div>
         <Actions
-          activeIndex={1}
-          amount={3}
-          onClickNext={() => {}}
-          onClickPrev={() => {}}
+          activeIndex={activeIndex}
+          amount={slides.length}
+          onClickNext={() => 
+            setActiveIndex(
+              Math.min(activeIndex + 1, slides.length - 1)
+            )
+          }
+          onClickPrev={() => {setActiveIndex(
+            Math.max(activeIndex - 1, 0)
+          )}}
         />
       </Container>
-    </div>
+      <div className={styles.background}>
+        {slides.map(({id, backgroundImageUrl}, index) => (
+          <div
+            key={id}
+            className={
+              cl(index === activeIndex && styles.backgroundActive)
+            }
+            style={{
+              backgroundImage: `url(${backgroundImageUrl})`,
+            }}
+          />
+        ))}
+      </div>
+    </main>
 	);
 }

@@ -19,6 +19,13 @@ export default function Actions({
   amount,
   className
 }: ActionsProps) {
+  const activeNumber = activeIndex + 1;
+  const maxNumber = Math.max(activeIndex + 1, amount);
+
+  if (amount <= 1) {
+    return null;
+  }
+
   return (
     <div className={cl(styles.actions, className)}>
       <button
@@ -32,14 +39,14 @@ export default function Actions({
         />
       </button>
       <span className={styles.actionsLine}>
-        {('0' + activeIndex).slice(-2)}
+        {('0' + activeNumber).slice(-2)}
         <span className={styles.actionsSlide}><span
           style={{
-            width: `${1 / amount * 100}%`,
-            left: `${(activeIndex - 1)/amount * 100}%`
+            width: `${1 / maxNumber * 100}%`,
+            left: `${activeIndex/maxNumber * 100}%`
           }}
         /></span>
-        {('0' + amount).slice(-2)}
+        {('0' + maxNumber).slice(-2)}
       </span>
       <button
         className={styles.actionsButton}

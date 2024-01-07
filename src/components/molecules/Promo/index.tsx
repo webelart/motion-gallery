@@ -1,15 +1,25 @@
+import cl from 'classnames';
 import { ComponentProps } from '@components/types';
 
 import styles from './index.module.scss';
 
+interface PromoProps extends ComponentProps {
+  title,
+  category,
+  text
+}
+
 export default function Promo({
+  title,
+  category,
+  text,
   className
-}: ComponentProps) {
+}: PromoProps) {
   return (
-    <div className={styles.promo}>
-      <h2>Our vision</h2>
-      <h1>Design</h1>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+    <div className={cl(styles.promo, className)}>
+      <h2>{category}</h2>
+      <h1>{title}</h1>
+      <p>{text}</p>
     </div>
   );
 }
