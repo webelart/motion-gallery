@@ -44,14 +44,14 @@ export default function CoverGallery({
         <Actions
           activeIndex={activeIndex}
           amount={slides.length}
-          onClickNext={() => 
-            setActiveIndex(
-              Math.min(activeIndex + 1, slides.length - 1)
-            )
-          }
-          onClickPrev={() => {setActiveIndex(
-            Math.max(activeIndex - 1, 0)
-          )}}
+          onClickNext={() => {
+            const newIndex = activeIndex + 1;
+            setActiveIndex(newIndex >= slides.length ? 0 : newIndex);
+          }}
+          onClickPrev={() => {
+            const newIndex = activeIndex - 1;
+            setActiveIndex(newIndex < 0 ? slides.length - 1 : newIndex);
+          }}
         />
       </Container>
       <div className={styles.background}>
