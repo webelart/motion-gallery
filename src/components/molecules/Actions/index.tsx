@@ -40,12 +40,14 @@ export default function Actions({
       </button>
       <span className={styles.actionsLine}>
         {('0' + activeNumber).slice(-2)}
-        <span className={styles.actionsSlide}><span
-          style={{
-            width: `${1 / maxNumber * 100}%`,
-            left: `${activeIndex/maxNumber * 100}%`
-          }}
-        /></span>
+        <span className={styles.actionsSlide}>
+          <span
+            style={{
+              width: `${1 / maxNumber * 100}%`,
+              left: `${activeIndex/maxNumber * 100}%`
+            }}
+          />
+        </span>
         {('0' + maxNumber).slice(-2)}
       </span>
       <button

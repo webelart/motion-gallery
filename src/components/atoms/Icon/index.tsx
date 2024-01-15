@@ -12,10 +12,12 @@ interface IconProps extends ComponentProps {
 export default function Icon({
 	iconName,
 	size = 'medium',
+	className,
 }: IconProps) {
 	return (
 		<span
 			className={cl(
+				className,
 				styles[iconName],
 				styles.icon,
 				styles[size]
