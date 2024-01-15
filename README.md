@@ -7,3 +7,6 @@ Lesson on YouTube: https://youtu.be/LBBnM_SGTww.
 npm install
 npm run dev
 ```
+
+## License
+React is [MIT licensed](./LICENSE).
